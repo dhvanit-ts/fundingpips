@@ -11,6 +11,7 @@ import "swiper/css";
 import UpperMiddleContent from "@/components/home/UpperMiddleContent";
 import Sandwich from "@/components/home/Sandwich";
 import BottomContent from "@/components/home/BottomContent";
+import Image from "next/image";
 
 export default function Home() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -78,10 +79,14 @@ export default function Home() {
               Why FundingPips?
             </h3>
             <div className="flex space-x-4 w-full max-w-7xl">
-              <HomeCard />
-              <HomeCard />
-              <HomeCard />
-              <HomeCard />
+              {featuresData.map((item) => (
+                <HomeCard
+                  blueText={item.blueText}
+                  whiteText={item.whiteText}
+                  image={item.image}
+                  key={item.blueText}
+                />
+              ))}
             </div>
           </div>
         </div>
@@ -97,3 +102,49 @@ export default function Home() {
     </div>
   );
 }
+
+const featuresData = [
+  {
+    image: (
+      <Image src="/hero/features/hand.svg" height={20} width={20} alt="icon" />
+    ),
+    blueText: "Zero reward denials.",
+    whiteText: "Trade with a peace of mind.",
+  },
+  {
+    image: (
+      <Image
+        src="/hero/features/thumbsup.svg"
+        height={30}
+        width={30}
+        alt="icon"
+      />
+    ),
+    blueText: "Your favorite platforms.",
+    whiteText: "MetaTrader 5, Match-Trader and cTrader.",
+  },
+  {
+    image: (
+      <Image
+        src="/hero/features/trophy.svg"
+        height={30}
+        width={30}
+        alt="icon"
+      />
+    ),
+    blueText: "Flexible Reward Cycles.",
+    whiteText: "The choice is your, weekly, bi-weekly monthly, or on demand.",
+  },
+  {
+    image: (
+      <Image
+        src="/hero/features/dollar.svg"
+        height={30}
+        width={30}
+        alt="icon"
+      />
+    ),
+    blueText: "We Grow Together.",
+    whiteText: "Trade up to $300.000 in simulated capital.",
+  },
+];

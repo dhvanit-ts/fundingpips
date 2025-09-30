@@ -3,17 +3,10 @@ import { H1, H2, P, UL } from "./Semantic";
 import Image from "next/image";
 import Link from "next/link";
 import { Separator } from "../ui/separator";
-import {
-  FaDiscord,
-  FaFacebook,
-  FaInstagram,
-  FaLinkedin,
-  FaStar,
-  FaXTwitter,
-  FaYoutube,
-} from "react-icons/fa6";
+import { FaDiscord, FaStar } from "react-icons/fa6";
 import { MdOutlineSupport } from "react-icons/md";
 import { FiSend } from "react-icons/fi";
+import Socials from "./Socials";
 
 type CardType = {
   icon: React.ReactNode;
@@ -139,33 +132,6 @@ const isoData = [
   },
 ];
 
-const socials = [
-  {
-    icon: <FaDiscord />,
-    link: "#",
-  },
-  {
-    icon: <FaInstagram />,
-    link: "#",
-  },
-  {
-    icon: <FaLinkedin />,
-    link: "#",
-  },
-  {
-    icon: <FaYoutube />,
-    link: "#",
-  },
-  {
-    icon: <FaFacebook />,
-    link: "#",
-  },
-  {
-    icon: <FaXTwitter />,
-    link: "#",
-  },
-];
-
 const Footer = () => {
   return (
     <div className="w-full relative max-w-7xl flex flex-col justify-center items-center">
@@ -197,13 +163,7 @@ const Footer = () => {
       <Separator />
       <div className="flex justify-between items-center w-full py-8">
         <span>Logo</span>
-        <div className="flex space-x-4">
-          {socials.map(({ link, icon }, idx) => (
-            <Link className="text-xl" key={idx} href={link}>
-              {icon}
-            </Link>
-          ))}
-        </div>
+        <Socials />
         <div className="flex space-x-8">
           <Image src="/home/google.svg" alt="Google" height={160} width={160} />
           <div className="h-14 w-[0.2px] bg-zinc-500" />
