@@ -134,16 +134,16 @@ const isoData = [
 
 const Footer = () => {
   return (
-    <div className="w-full relative max-w-7xl flex flex-col justify-center items-center">
-      <h4 className="my-40 text-6xl font-semibold max-w-2xl text-center">
+    <div className="w-full px-4 sm:px-0 relative max-w-7xl flex flex-col justify-center items-center">
+      <h4 className="my-24 sm:my-40 text-4xl sm:text-6xl font-semibold max-w-2xl text-center">
         Empowering Traders in 195+ Countries
       </h4>
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {data.map((item, idx) => (
           <Card key={idx} {...item} />
         ))}
       </div>
-      <div className="flex justify-between w-full">
+      <div className="flex flex-col sm:flex-row justify-between w-full">
         <Links />
         <div className="my-8">
           {isoData.map((item) => (
@@ -161,7 +161,7 @@ const Footer = () => {
         </div>
       </div>
       <Separator />
-      <div className="flex justify-between items-center w-full py-8">
+      <div className="flex flex-col sm:flex-row space-y-6 sm:space-y-0 justify-between items-center w-full py-8">
         <span>Logo</span>
         <Socials />
         <div className="flex space-x-8">
@@ -352,7 +352,7 @@ const Card = ({
 
 const Services = () => {
   return (
-    <div className="flex justify-center items-center space-x-4 p-4">
+    <div className="flex flex-wrap px-4 justify-center items-center space-x-4 p-4">
       <svg
         width="64"
         height="40"

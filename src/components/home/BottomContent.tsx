@@ -7,9 +7,9 @@ import Footer from "../footer/Footer";
 function BottomContent() {
   return (
     <>
-      <div className="mt-80 w-full max-w-7xl">
+      <div className="mt-40 sm:mt-80 w-full max-w-7xl">
         <div className="max-w-6xl mx-auto flex justify-between">
-          <h2 className="text-8xl max-w-2xl font-extrabold">
+          <h2 className="text-5xl sm:text-8xl max-w-2xl font-extrabold">
             <span className="text-zinc-100">Made in Dubai.</span>{" "}
             <span className="text-zinc-400">
               Testimonials from all around the world.

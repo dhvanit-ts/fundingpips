@@ -47,7 +47,7 @@ function page() {
             width={850}
             height={850}
           />
-          <div className="absolute left-0 bottom-0 rounded-2xl px-8 py-6 backdrop-blur-sm bg-[#0c0c4c]/60">
+          <div className="absolute left-0 bottom-0 rounded-2xl px-8 py-6 backdrop-blur-sm bg-[#17175e]/60">
             <h3 className="text-lg font-semibold mb-12">Our Mission</h3>
             <p className="max-w-72">
               Enabling widespread access to trading while upholding
@@ -75,7 +75,7 @@ function page() {
           <h3 className="text-7xl mb-6 max-w-xl">
             Team where Creative Minds Innovate
           </h3>
-          <div className="flex justify-center items-center h-96 rounded-md border border-dashed border-blue-900 bg-blue-950">
+          <div className="flex justify-center items-center h-96 rounded-md border-2 border-dashed border-blue-900 bg-blue-950">
             <p>Team members here</p>
           </div>
         </div>
@@ -90,7 +90,7 @@ function page() {
               resources, and unmatched opportunities to help traders succeed in
               the ever-changing financial markets.
             </p>
-            <Button className="rounded-full text-lg px-12 py-3">Get started</Button>
+            <Button className="rounded-full text-lg px-12 py-3 font-semibold">Get started</Button>
           </div>
           <Separator />
         </div>

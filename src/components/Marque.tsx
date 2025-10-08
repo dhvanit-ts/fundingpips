@@ -24,7 +24,7 @@ const duplicatedData = [...data, ...data, ...data];
 
 export default function Marque() {
   return (
-    <div className="text-zinc-100 pb-32 pt-48 space-y-8 max-w-7xl overflow-hidden">
+    <div className="text-zinc-100 pb-24 sm:pb-32 pt-32 sm:pt-48 space-y-8 max-w-7xl overflow-hidden">
       <div className="relative w-full">
         <div className="pointer-events-none absolute inset-0 z-10 flex justify-between">
           <div className="w-60 bg-gradient-to-l from-transparent to-background" />

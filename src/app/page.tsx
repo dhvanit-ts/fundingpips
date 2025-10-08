@@ -32,7 +32,7 @@ export default function Home() {
   });
 
   return (
-    <div ref={containerRef} className="font-segoe-ui text-foreground">
+    <div ref={containerRef} className="font-segoe-ui text-foreground w-screen overflow-hidden">
       <StickyBanner>
         Haven&apos;t purchased yet? Use code HELLO & Get 20% OFF now on your
         first purchase!
@@ -47,9 +47,9 @@ export default function Home() {
             loop
             muted
             playsInline
+            className="h-[435px] md:h-[870px] mt-20 md:mt-0 w-full object-cover filter blur-[2px] brightness-[1.1] contrast-[1.3] saturate-[1.4]"
             preload="auto"
             style={{ scale: smoothScale }}
-            className="h-[435px] md:h-[870px] w-full object-cover filter blur-[2px] brightness-[1.1] contrast-[1.3] saturate-[1.4]"
           >
             <source src="hero/output.webm" type="video/webm" />
           </motion.video>
@@ -59,12 +59,12 @@ export default function Home() {
         {/* Content */}
         <div className="relative w-full flex flex-col justify-center items-center pb-8">
           <Header />
-          <div className="space-y-8 mt-52 flex flex-col justify-center items-center">
-            <h3 className="text-[7rem] leading-28 font-semibold flex flex-col justify-center items-center">
+          <div className="space-y-8 mt-24 md:mt-52 flex flex-col justify-center items-center">
+            <h3 className="text-5xl md:text-[7rem] md:leading-28 font-semibold flex flex-col justify-center items-center">
               <span className="text-nowrap">Built by traders</span>
               <span>➔ for traders.</span>
             </h3>
-            <p className="text-center max-w-2xl px-4">
+            <p className="text-center text-sm sm:text-base max-w-2xl px-4">
               Join over 1,000,000 traders in the world&apos;s leading firm.
               Trade in a fully simulated environment and earn up to 100%
               rewards.
@@ -75,10 +75,10 @@ export default function Home() {
             </div>
           </div>
           <div className="mb-10 mt-20">
-            <h3 className="text-2xl text-center my-4 font-semibold">
+            <h3 className="text-xl sm:text-2xl text-center my-4 font-semibold">
               Why FundingPips?
             </h3>
-            <div className="flex space-x-4 w-full max-w-7xl">
+            <div className="flex space-x-4 w-full overflow-x-scroll max-w-screen md:max-w-7xl">
               {featuresData.map((item) => (
                 <HomeCard
                   blueText={item.blueText}
@@ -93,7 +93,7 @@ export default function Home() {
         <div className="w-full relative flex flex-col justify-center items-center">
           <UpperMiddleContent />
         </div>
-        <div className="w-full relative flex flex-col justify-center items-center bg-gradient-to-b from-[#000143] to-[#2336b2]">
+        <div className="w-full px-4 relative flex flex-col justify-center items-center bg-gradient-to-b from-[#000143] to-[#2336b2]">
           <MiddleContent />
           <Sandwich />
           <BottomContent />

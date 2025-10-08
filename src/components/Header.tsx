@@ -14,11 +14,11 @@ function Header() {
   return (
     <div className="max-w-7xl mx-auto mt-11 w-full flex justify-between items-center">
       <div>Logo</div>
-      <div className="py-2">
+      <div className="py-2 hidden sm:block">
         <NavigationMenu viewport={false} className="z-30">
           <NavigationMenuList>
             <NavigationMenuItem>
-              <NavigationMenuLink>
+              <NavigationMenuLink asChild>
                 <Link href="/">Home</Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
@@ -29,7 +29,7 @@ function Header() {
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuTrigger>About us</NavigationMenuTrigger>
-              <NavigationMenuContent className="border-zinc-400">
+              <NavigationMenuContent className="border-zinc-500 md:w-36">
                 <ul>
                   <li>
                     <NavigationMenuLink
@@ -42,7 +42,7 @@ function Header() {
                       className="text-zinc-200 hover:text-zinc-100 underline-offset-4 hover:underline"
                       asChild
                     >
-                      <Link href="/">About us</Link>
+                      <Link href="/about-us">About us</Link>
                     </NavigationMenuLink>
                     <NavigationMenuLink
                       className="text-zinc-200 hover:text-zinc-100 underline-offset-4 hover:underline"

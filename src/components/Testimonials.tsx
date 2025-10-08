@@ -93,7 +93,7 @@ function Testimonials() {
 
   return (
     <div className="text-zinc-100 py-12">
-      <div className="max-w-7xl mx-auto relative">
+      <div className="max-w-7xl mx-auto relative overflow-hidden">
         <div className="pointer-events-none absolute inset-0 z-10 flex justify-between">
           <div className="w-24 bg-gradient-to-r from-blue-800 to-transparent" />
           <div className="w-24 bg-gradient-to-l from-blue-800 to-transparent" />
@@ -104,6 +104,8 @@ function Testimonials() {
             modules={[Pagination, Navigation, Autoplay]}
             spaceBetween={10}
             slidesPerView={4}
+            pagination={{ clickable: true }}
+            a11y={{ enabled: true }}
             freeMode={true}
             loop={true}
             speed={15000}
